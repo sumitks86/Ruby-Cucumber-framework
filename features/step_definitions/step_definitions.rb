@@ -4,7 +4,8 @@ Given('I am on the Google search page') do
   # base_driver_url = File.dirname(__FILE__) + '/web_drivers'
   base_driver_url = Dir.pwd + '/web_drivers'
   Selenium::WebDriver::Firefox.driver_path = "#{base_driver_url}/geckodriver"
-  @driver = Selenium::WebDriver.for :firefox
+  Selenium::WebDriver::Chrome.driver_path = "#{base_driver_url}/chromedriver"
+  @driver = Selenium::WebDriver.for :chrome
   @driver.get 'http://google.com'
 end
 
