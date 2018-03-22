@@ -1,11 +1,4 @@
 Given('I am on the Google search page') do
-  require 'rubygems'
-  require 'selenium-webdriver'
-  # # base_driver_url = File.dirname(__FILE__) + '/web_drivers'
-  # base_driver_url = Dir.pwd + '/web_drivers'
-  # Selenium::WebDriver::Firefox.driver_path = "#{base_driver_url}/geckodriver"
-  # Selenium::WebDriver::Chrome.driver_path = "#{base_driver_url}/chromedriver"
-  @browser = Selenium::WebDriver.for :chrome
   @browser.get 'http://google.com'
 end
 
